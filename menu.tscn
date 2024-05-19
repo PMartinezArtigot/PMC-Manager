@@ -1,27 +1,30 @@
-[gd_scene format=3 uid="uid://c8a86t1sxdjss"]
+[gd_scene load_steps=2 format=3 uid="uid://c8a86t1sxdjss"]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource type="Script" path="res://menu.gd" id="1_e0ef3"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 1920.0
-offset_bottom = 1080.0
+[node name="menu" type="Node2D"]
+script = ExtResource("1_e0ef3")
 
-[node name="Label" type="Label" parent="."]
+[node name="Title" type="Label" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 430.0
+offset_left = 691.0
 offset_top = 200.0
-offset_right = 752.0
-offset_bottom = 267.0
+offset_right = 1229.0
+offset_bottom = 310.0
 grow_horizontal = 2
 size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 80
 text = "PMC Manager"
 
-[node name="Button" type="Button" parent="."]
-offset_left = 486.0
-offset_top = 385.0
-offset_right = 686.0
-offset_bottom = 435.0
-text = "PLAY"
+[node name="PlayBtn" type="Button" parent="."]
+offset_left = 810.0
+offset_top = 751.0
+offset_right = 1110.0
+offset_bottom = 851.0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 50
+text = "JUGAR"
+
+[connection signal="pressed" from="PlayBtn" to="." method="_on_play_btn_pressed"]
