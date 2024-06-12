@@ -1,0 +1,2960 @@
+[gd_scene load_steps=18 format=3 uid="uid://k7sxl20ouwnm"]
+
+[ext_resource type="Script" path="res://blackmarket.gd" id="1_kerkj"]
+[ext_resource type="Texture2D" uid="uid://b7cw2paupbb0" path="res://art/ammo.png" id="2_8cd0c"]
+[ext_resource type="FontFile" uid="uid://kfsnmmks5vdm" path="res://font/Retro Gaming.ttf" id="2_8ckgc"]
+[ext_resource type="Texture2D" uid="uid://c48yv86gwudc5" path="res://art/download (3).png" id="2_lles6"]
+[ext_resource type="Texture2D" uid="uid://beptrb5w6hhcn" path="res://art/constmats.png" id="3_gi15n"]
+[ext_resource type="Texture2D" uid="uid://c6ehybpjfvlde" path="res://art/rations.png" id="4_7qw6o"]
+[ext_resource type="Texture2D" uid="uid://p3cwxkw22slo" path="res://art/parts.png" id="5_rkfsk"]
+[ext_resource type="Texture2D" uid="uid://cjvwgi3gd2ub0" path="res://art/warbucks.png" id="6_np362"]
+[ext_resource type="Texture2D" uid="uid://pc4jkmogfmkj" path="res://art/info.png" id="8_ht642"]
+[ext_resource type="Script" path="res://contextinfo.gd" id="9_fe5ih"]
+[ext_resource type="Texture2D" uid="uid://cjrvvwgjp3pyu" path="res://art/missioninprog.png" id="9_lso8q"]
+[ext_resource type="Texture2D" uid="uid://dvxix64va8ssh" path="res://art/hoodedman.png" id="11_v8a20"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m14vi"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_2tjqp"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_8ld6c"]
+
+[sub_resource type="Theme" id="Theme_mtfjk"]
+
+[sub_resource type="Theme" id="Theme_1201h"]
+
+[node name="blackmarket" type="Node2D"]
+script = ExtResource("1_kerkj")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 6400.0
+offset_bottom = 3600.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_lles6")
+
+[node name="changedayanim2" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 217.0
+color = Color(0, 0, 0, 0.443137)
+
+[node name="dia" type="Label" parent="."]
+offset_left = 798.0
+offset_top = 100.0
+offset_right = 931.0
+offset_bottom = 183.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 60
+text = "DÍA"
+metadata/_edit_use_anchors_ = true
+
+[node name="dianum" type="Label" parent="."]
+offset_left = 939.0
+offset_top = 100.0
+offset_right = 1123.0
+offset_bottom = 183.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 60
+text = "9999"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="NUObar2" type="ColorRect" parent="."]
+offset_left = 655.0
+offset_top = 15.0
+offset_right = 1265.0
+offset_bottom = 85.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="NUOrep2" type="ColorRect" parent="."]
+offset_left = 1435.0
+offset_top = 28.0
+offset_right = 1745.0
+offset_bottom = 58.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="NUOrep3" type="ColorRect" parent="."]
+offset_left = 1435.0
+offset_top = 88.0
+offset_right = 1745.0
+offset_bottom = 118.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="NUOrep4" type="ColorRect" parent="."]
+offset_left = 1435.0
+offset_top = 148.0
+offset_right = 1745.0
+offset_bottom = 178.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="FLRbar" type="ColorRect" parent="."]
+offset_left = 1060.0
+offset_top = 20.0
+offset_right = 1260.0
+offset_bottom = 80.0
+color = Color(0.133333, 0.545098, 0.133333, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="NUObar" type="ColorRect" parent="."]
+offset_left = 660.0
+offset_top = 20.0
+offset_right = 860.0
+offset_bottom = 80.0
+color = Color(0.254902, 0.560784, 0.870588, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="EPEbar" type="ColorRect" parent="."]
+offset_left = 860.0
+offset_top = 20.0
+offset_right = 1060.0
+offset_bottom = 80.0
+color = Color(0.8, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Ammo" type="Sprite2D" parent="."]
+position = Vector2(50, 50)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_8cd0c")
+
+[node name="Constmats" type="Sprite2D" parent="."]
+position = Vector2(50.4, 150)
+scale = Vector2(0.081768, 0.0921687)
+texture = ExtResource("3_gi15n")
+
+[node name="Rations" type="Sprite2D" parent="."]
+position = Vector2(261, 51)
+scale = Vector2(0.1, 0.102)
+texture = ExtResource("4_7qw6o")
+
+[node name="Parts" type="Sprite2D" parent="."]
+position = Vector2(264, 151)
+scale = Vector2(0.059165, 0.0632383)
+texture = ExtResource("5_rkfsk")
+
+[node name="Warbucks" type="Sprite2D" parent="."]
+position = Vector2(446, 101)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("6_np362")
+
+[node name="ammocount" type="Label" parent="."]
+offset_left = 107.0
+offset_top = 33.0
+offset_right = 199.0
+offset_bottom = 75.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "9999"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="constmatscount" type="Label" parent="."]
+offset_left = 107.0
+offset_top = 133.0
+offset_right = 199.0
+offset_bottom = 175.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "9999"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="missioninprogbtn" type="TextureButton" parent="."]
+offset_left = 50.0
+offset_top = 934.0
+offset_right = 1018.0
+offset_bottom = 2388.0
+scale = Vector2(0.09, 0.09)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("9_lso8q")
+
+[node name="rationscount" type="Label" parent="."]
+offset_left = 325.0
+offset_top = 33.0
+offset_right = 417.0
+offset_bottom = 75.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "9999"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="partscount" type="Label" parent="."]
+offset_left = 325.0
+offset_top = 133.0
+offset_right = 417.0
+offset_bottom = 175.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "9999"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="moneycount" type="Label" parent="."]
+offset_left = 511.0
+offset_top = 79.0
+offset_right = 603.0
+offset_bottom = 121.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "9999"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="NUOrep" type="ColorRect" parent="."]
+offset_left = 1440.0
+offset_top = 33.0
+offset_right = 1740.0
+offset_bottom = 53.0
+color = Color(0.254902, 0.560784, 0.870588, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="EPErep" type="ColorRect" parent="."]
+offset_left = 1440.0
+offset_top = 93.0
+offset_right = 1740.0
+offset_bottom = 113.0
+color = Color(0.8, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="FLRrep" type="ColorRect" parent="."]
+offset_left = 1440.0
+offset_top = 153.0
+offset_right = 1740.0
+offset_bottom = 173.0
+color = Color(0.133333, 0.545098, 0.133333, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ally" type="Label" parent="."]
+offset_left = 1804.0
+offset_top = 80.0
+offset_right = 1918.0
+offset_bottom = 122.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "Aliado"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="enemy" type="Label" parent="."]
+offset_left = 1275.0
+offset_top = 80.0
+offset_right = 1423.0
+offset_bottom = 122.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "Enemigo"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="NUOrepval" type="ColorRect" parent="."]
+offset_left = 1580.0
+offset_top = 20.0
+offset_right = 1600.0
+offset_bottom = 70.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="EPErepval" type="ColorRect" parent="."]
+offset_left = 1580.0
+offset_top = 80.0
+offset_right = 1600.0
+offset_bottom = 130.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="FLRrepval" type="ColorRect" parent="."]
+offset_left = 1580.0
+offset_top = 140.0
+offset_right = 1600.0
+offset_bottom = 190.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="nuotag" type="Label" parent="."]
+offset_left = 1729.0
+offset_top = 20.0
+offset_right = 1819.0
+offset_bottom = 62.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "NUO"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="epetag" type="Label" parent="."]
+offset_left = 1729.0
+offset_top = 80.0
+offset_right = 1819.0
+offset_bottom = 122.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "EPE"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="flrtag" type="Label" parent="."]
+offset_left = 1729.0
+offset_top = 140.0
+offset_right = 1819.0
+offset_bottom = 182.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "FLR"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="infocontextbtn" type="TextureButton" parent="."]
+offset_left = 1753.0
+offset_top = 934.0
+offset_right = 2009.0
+offset_bottom = 1190.0
+scale = Vector2(0.5, 0.5)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("8_ht642")
+
+[node name="headquartersbtn" type="Button" parent="."]
+offset_left = 1380.0
+offset_top = 950.0
+offset_right = 1700.0
+offset_bottom = 1050.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 33
+theme_override_styles/normal = SubResource("StyleBoxFlat_m14vi")
+text = "Base de
+Operaciones"
+metadata/_edit_use_anchors_ = true
+
+[node name="enddaybtn" type="Button" parent="."]
+offset_left = 670.0
+offset_top = 950.0
+offset_right = 1245.0
+offset_bottom = 1050.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = SubResource("StyleBoxFlat_m14vi")
+text = "Finalizar planes"
+metadata/_edit_use_anchors_ = true
+
+[node name="listmissionbtn" type="Button" parent="."]
+offset_left = 220.0
+offset_top = 950.0
+offset_right = 540.0
+offset_bottom = 1050.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 33
+theme_override_styles/normal = SubResource("StyleBoxFlat_m14vi")
+text = "Lista de
+Misiones"
+metadata/_edit_use_anchors_ = true
+
+[node name="itemshop" type="Panel" parent="."]
+offset_left = 80.0
+offset_top = 263.0
+offset_right = 980.0
+offset_bottom = 913.0
+
+[node name="storeclerk" type="Panel" parent="."]
+offset_left = 1075.0
+offset_top = 258.0
+offset_right = 1840.0
+offset_bottom = 913.0
+
+[node name="ColorRect" type="ColorRect" parent="storeclerk"]
+layout_mode = 0
+offset_top = 524.0
+offset_right = 765.0
+offset_bottom = 655.0
+color = Color(0, 0, 0, 1)
+
+[node name="clerkspeak" type="RichTextLabel" parent="storeclerk"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 535.0
+offset_right = 753.0
+offset_bottom = 626.0
+theme_override_fonts/normal_font = ExtResource("2_8ckgc")
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+
+[node name="Hoodedman" type="Sprite2D" parent="storeclerk"]
+position = Vector2(380, 273)
+scale = Vector2(0.21, 0.21)
+texture = ExtResource("11_v8a20")
+
+[node name="Label" type="Label" parent="storeclerk"]
+layout_mode = 0
+offset_left = -952.0
+offset_top = 22.0
+offset_right = -136.0
+offset_bottom = 613.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "Equipamiento:
+
+
+
+
+ítems:
+
+
+
+
+Contratos:
+
+
+"
+
+[node name="contbas" type="Button" parent="."]
+offset_left = 175.0
+offset_top = 786.0
+offset_right = 521.0
+offset_bottom = 886.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 33
+theme_override_styles/normal = SubResource("StyleBoxFlat_m14vi")
+text = "Contrato 
+básico"
+metadata/_edit_use_anchors_ = true
+
+[node name="contadv" type="Button" parent="."]
+offset_left = 565.0
+offset_top = 786.0
+offset_right = 885.0
+offset_bottom = 886.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 33
+theme_override_styles/normal = SubResource("StyleBoxFlat_m14vi")
+text = "Contrato
+avanzado"
+metadata/_edit_use_anchors_ = true
+
+[node name="fadescreenbg" type="ColorRect" parent="."]
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 0.572549)
+
+[node name="buysoldier" type="Panel" parent="."]
+visible = false
+offset_left = 312.0
+offset_top = 376.0
+offset_right = 1542.0
+offset_bottom = 682.0
+
+[node name="ColorRect" type="ColorRect" parent="buysoldier"]
+layout_mode = 0
+offset_top = 85.0
+offset_right = 1230.0
+offset_bottom = 306.0
+color = Color(0.18359, 0.18359, 0.18359, 1)
+
+[node name="tlbg" type="ColorRect" parent="buysoldier"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 1230.0
+offset_bottom = 85.0
+color = Color(0, 0, 0, 1)
+
+[node name="tl" type="Label" parent="buysoldier"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 1230.0
+offset_bottom = 84.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 42
+text = "Contratar soldado"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="closescreen" type="Button" parent="buysoldier"]
+layout_mode = 0
+offset_left = 1114.0
+offset_top = 1.0
+offset_right = 1230.0
+offset_bottom = 84.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 50
+text = "x"
+flat = true
+icon_alignment = 1
+
+[node name="yesbuy" type="Button" parent="buysoldier"]
+layout_mode = 0
+offset_left = 878.0
+offset_top = 100.0
+offset_right = 1063.0
+offset_bottom = 167.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "Confirmar"
+
+[node name="nobuy" type="Button" parent="buysoldier"]
+layout_mode = 0
+offset_left = 878.0
+offset_top = 207.0
+offset_right = 1069.0
+offset_bottom = 274.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "Denegar"
+
+[node name="tl2" type="Label" parent="buysoldier"]
+layout_mode = 0
+offset_top = 100.0
+offset_right = 811.0
+offset_bottom = 194.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "Seguro que quieres contratar
+este soldado por"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Warbucks" type="Sprite2D" parent="buysoldier"]
+position = Vector2(468, 227)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("6_np362")
+
+[node name="moneycount" type="Label" parent="buysoldier"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.174797
+anchor_top = 0.395425
+anchor_right = -0.155285
+anchor_bottom = 0.437909
+offset_left = 511.0
+offset_top = 79.0
+offset_right = 579.0
+offset_bottom = 121.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 40
+text = "9999"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="fadescreenbg2" type="ColorRect" parent="."]
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 0.572549)
+
+[node name="contextinfo" type="Panel" parent="."]
+visible = false
+offset_left = 690.0
+offset_top = 220.0
+offset_right = 1230.0
+offset_bottom = 920.0
+theme = SubResource("Theme_2tjqp")
+script = ExtResource("9_fe5ih")
+
+[node name="infobg" type="ColorRect" parent="contextinfo"]
+layout_mode = 0
+offset_left = -329.0
+offset_right = 872.0
+offset_bottom = 700.0
+color = Color(0.277528, 0.277528, 0.277528, 1)
+
+[node name="titleBG" type="ColorRect" parent="contextinfo"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = -329.0
+offset_right = 872.0
+offset_bottom = 60.0
+
+[node name="titlemission" type="Label" parent="contextinfo"]
+layout_mode = 0
+offset_left = -329.0
+offset_right = 872.0
+offset_bottom = 60.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "Información"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="backbtn" type="Button" parent="contextinfo"]
+layout_mode = 0
+offset_left = 724.0
+offset_top = -3.0
+offset_right = 872.0
+offset_bottom = 60.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 40
+text = "x"
+
+[node name="context" type="Button" parent="contextinfo"]
+layout_mode = 0
+offset_left = -315.0
+offset_top = 69.0
+offset_right = -101.0
+offset_bottom = 129.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 26
+toggle_mode = true
+button_pressed = true
+button_group = SubResource("ButtonGroup_8ld6c")
+text = "Contexto"
+
+[node name="basicinfo" type="Button" parent="contextinfo"]
+layout_mode = 0
+offset_left = -315.0
+offset_top = 149.0
+offset_right = -101.0
+offset_bottom = 229.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 26
+toggle_mode = true
+button_group = SubResource("ButtonGroup_8ld6c")
+text = "Información
+básica"
+
+[node name="soldier" type="Button" parent="contextinfo"]
+layout_mode = 0
+offset_left = -315.0
+offset_top = 248.0
+offset_right = -101.0
+offset_bottom = 328.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 26
+toggle_mode = true
+button_group = SubResource("ButtonGroup_8ld6c")
+text = "Tus
+soldados"
+
+[node name="missionmenu" type="Button" parent="contextinfo"]
+layout_mode = 0
+offset_left = -315.0
+offset_top = 350.0
+offset_right = -101.0
+offset_bottom = 430.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 26
+toggle_mode = true
+button_group = SubResource("ButtonGroup_8ld6c")
+text = "Lista de
+misiones"
+
+[node name="headquarters" type="Button" parent="contextinfo"]
+layout_mode = 0
+offset_left = -315.0
+offset_top = 448.0
+offset_right = -149.0
+offset_bottom = 528.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 26
+toggle_mode = true
+button_group = SubResource("ButtonGroup_8ld6c")
+text = "Base de
+Operaciones"
+
+[node name="blackmarket" type="Button" parent="contextinfo"]
+layout_mode = 0
+offset_left = -315.0
+offset_top = 546.0
+offset_right = -101.0
+offset_bottom = 626.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 26
+toggle_mode = true
+button_group = SubResource("ButtonGroup_8ld6c")
+text = "Mercado
+Negro"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="contextinfo"]
+layout_mode = 0
+offset_left = -87.0
+offset_top = 84.0
+offset_right = 872.0
+offset_bottom = 677.0
+theme_override_fonts/normal_font = ExtResource("2_8ckgc")
+theme_override_fonts/bold_font = ExtResource("2_8ckgc")
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 28
+bbcode_enabled = true
+text = "[b]¡Bienvenido a PMC Manager![/b]
+
+El mundo se encuentra en medio de un gran conflicto, tres grandes facciones luchan por el control total del planeta y tú, el jugador, ves esta gran guerra como una oportunidad de hacer dinero, crecer tu poder en este nuevo mundo y posiblemente, cambiar el curso del conflicto. Así que juntas unas pocas personas, compráis una base militar abandonada y montáis una compañía militar privada. Aunque tenéis pocos soldados, recursos y equipamiento, las tres fuerzas no tardan en ponen en contacto contigo para solicitar tus servicios.
+
+[b]Las Naciones Unidas del Oeste (NUO)[/b]
+
+Las fuerzas más preparadas del conflicto. Es más sencillo decir en qué países los soldados de las NUO NO han sido envíados para intervenir en conflictos locales o en misiones de \"paz\". Son reconocidos mundialmente por su riqueza, eficiencia en combate y su alta tecnología, conseguida a través de una gran industria militar subvencionada por sus ciudadanos (y varios negocios secretos entre su gobierno y empresas armamentísticas).
+
+[b]El Ejército de los Pueblos del Este (EPE)[/b]
+
+El enemigo histórico de NUO, los Pueblos del Este son más reservados en su intervención militar, optando por absorbir países independientes que hacen frontera con su territorio, inculcando su cultura y manera de vivir con un puño de hierro: su vasto ejército. Aunque su equipamiento sea subpar comparado con el de las fuerzas NUO, poseen grandes cantidades de este, debido a su gran industrialización y aún más grande ejército.
+
+[b] Fuerzas de Liberación Rebelde (FLR)[/b]
+
+Parece ser que por donde pasan los NUOs y los EPEs, nuevas bases del FLR aparecen. Generalmente se encuentran en países que solían ser independientes hasta que fueron ocupados. Sus soldados siendo ciudadanos con poco entrenamiento y equipamiento en pésima condición, luchan contra la ocupación de las otras dos fuerzas, a través de métodos radicales y financiados por varias actividades altamente ilegales.
+
+[b] ¿Quién apoyarás? ¿Quién atacarás? ¿Mantendrás este conflicto para hacerte asquerosamente rico o pondrás fin a la guerra? Estas decisiones ahora están en tus manos... buena suerte, la necesitarás para sobrevivir. [/b]"
+
+[node name="missionsinprogress" type="Panel" parent="."]
+visible = false
+offset_left = 690.0
+offset_top = 220.0
+offset_right = 1230.0
+offset_bottom = 920.0
+theme = SubResource("Theme_mtfjk")
+
+[node name="infobg" type="ColorRect" parent="missionsinprogress"]
+layout_mode = 0
+offset_left = -329.0
+offset_right = 872.0
+offset_bottom = 723.0
+color = Color(0.277528, 0.277528, 0.277528, 1)
+
+[node name="titleBG" type="ColorRect" parent="missionsinprogress"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = -329.0
+offset_right = 872.0
+offset_bottom = 60.0
+
+[node name="backbtn" type="Button" parent="missionsinprogress"]
+layout_mode = 0
+offset_left = 724.0
+offset_right = 872.0
+offset_bottom = 60.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 40
+text = "x"
+
+[node name="titlemission" type="Label" parent="missionsinprogress"]
+layout_mode = 0
+offset_left = -329.0
+offset_right = 872.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 30
+text = "Misiones en curso"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="squad1" type="Panel" parent="missionsinprogress"]
+layout_mode = 0
+offset_left = -320.0
+offset_top = 69.0
+offset_right = 864.0
+offset_bottom = 189.0
+
+[node name="squadlbl" type="Label" parent="missionsinprogress/squad1"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 187.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "Escuadrón 1"
+
+[node name="missionlbl" type="Label" parent="missionsinprogress/squad1"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 60.0
+offset_right = 80.0
+offset_bottom = 88.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "Misión:"
+
+[node name="reward" type="Label" parent="missionsinprogress/squad1"]
+layout_mode = 0
+offset_left = 374.0
+offset_top = 10.0
+offset_right = 559.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "Recompensa"
+
+[node name="daysleft" type="Label" parent="missionsinprogress/squad1"]
+layout_mode = 0
+offset_left = 970.0
+offset_top = 10.0
+offset_right = 1177.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "Días restantes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Ammo" type="Sprite2D" parent="missionsinprogress/squad1"]
+position = Vector2(391.75, 66.625)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("2_8cd0c")
+
+[node name="Constmats" type="Sprite2D" parent="missionsinprogress/squad1"]
+position = Vector2(392, 98)
+scale = Vector2(0.03, 0.034)
+texture = ExtResource("3_gi15n")
+
+[node name="Rations" type="Sprite2D" parent="missionsinprogress/squad1"]
+position = Vector2(518, 68.5)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("4_7qw6o")
+
+[node name="Parts" type="Sprite2D" parent="missionsinprogress/squad1"]
+position = Vector2(519, 100)
+scale = Vector2(0.03, 0.032)
+texture = ExtResource("5_rkfsk")
+
+[node name="Warbucks" type="Sprite2D" parent="missionsinprogress/squad1"]
+position = Vector2(630, 84)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("6_np362")
+
+[node name="ammocount" type="Label" parent="missionsinprogress/squad1"]
+layout_mode = 0
+offset_left = 410.0
+offset_top = 53.0
+offset_right = 480.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="rationcount" type="Label" parent="missionsinprogress/squad1"]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 53.0
+offset_right = 615.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="constpartscount" type="Label" parent="missionsinprogress/squad1"]
+layout_mode = 0
+offset_left = 410.0
+offset_top = 84.0
+offset_right = 480.0
+offset_bottom = 112.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="partscount" type="Label" parent="missionsinprogress/squad1"]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 84.0
+offset_right = 615.0
+offset_bottom = 112.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="moneycount" type="Label" parent="missionsinprogress/squad1"]
+layout_mode = 0
+offset_left = 660.0
+offset_top = 70.0
+offset_right = 730.0
+offset_bottom = 98.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="missionname" type="RichTextLabel" parent="missionsinprogress/squad1"]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 63.0
+offset_right = 374.0
+offset_bottom = 112.0
+theme_override_fonts/normal_font = ExtResource("2_8ckgc")
+text = "En base"
+
+[node name="victchancelbl" type="Label" parent="missionsinprogress/squad1"]
+layout_mode = 0
+offset_left = 707.0
+offset_top = 10.0
+offset_right = 942.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "Prob. de victoria"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="daysleftnum" type="Label" parent="missionsinprogress/squad1"]
+layout_mode = 0
+offset_left = 970.0
+offset_top = 59.0
+offset_right = 1177.0
+offset_bottom = 101.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "????"
+horizontal_alignment = 1
+
+[node name="prbwinchancenum" type="Label" parent="missionsinprogress/squad1"]
+layout_mode = 0
+offset_left = 711.0
+offset_top = 64.0
+offset_right = 942.0
+offset_bottom = 106.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "????"
+horizontal_alignment = 1
+
+[node name="squad2" type="Panel" parent="missionsinprogress"]
+layout_mode = 0
+offset_left = -320.0
+offset_top = 200.0
+offset_right = 864.0
+offset_bottom = 320.0
+
+[node name="squadlbl" type="Label" parent="missionsinprogress/squad2"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 187.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "Escuadrón 2"
+
+[node name="missionlbl" type="Label" parent="missionsinprogress/squad2"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 60.0
+offset_right = 80.0
+offset_bottom = 88.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "Misión:"
+
+[node name="reward" type="Label" parent="missionsinprogress/squad2"]
+layout_mode = 0
+offset_left = 374.0
+offset_top = 10.0
+offset_right = 559.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "Recompensa"
+
+[node name="daysleft" type="Label" parent="missionsinprogress/squad2"]
+layout_mode = 0
+offset_left = 970.0
+offset_top = 10.0
+offset_right = 1177.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "Días restantes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Ammo" type="Sprite2D" parent="missionsinprogress/squad2"]
+position = Vector2(391.75, 66.625)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("2_8cd0c")
+
+[node name="Constmats" type="Sprite2D" parent="missionsinprogress/squad2"]
+position = Vector2(392, 98)
+scale = Vector2(0.03, 0.034)
+texture = ExtResource("3_gi15n")
+
+[node name="Rations" type="Sprite2D" parent="missionsinprogress/squad2"]
+position = Vector2(518, 68.5)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("4_7qw6o")
+
+[node name="Parts" type="Sprite2D" parent="missionsinprogress/squad2"]
+position = Vector2(519, 100)
+scale = Vector2(0.03, 0.032)
+texture = ExtResource("5_rkfsk")
+
+[node name="Warbucks" type="Sprite2D" parent="missionsinprogress/squad2"]
+position = Vector2(630, 84)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("6_np362")
+
+[node name="ammocount" type="Label" parent="missionsinprogress/squad2"]
+layout_mode = 0
+offset_left = 410.0
+offset_top = 53.0
+offset_right = 480.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="rationcount" type="Label" parent="missionsinprogress/squad2"]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 53.0
+offset_right = 615.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="constpartscount" type="Label" parent="missionsinprogress/squad2"]
+layout_mode = 0
+offset_left = 410.0
+offset_top = 84.0
+offset_right = 480.0
+offset_bottom = 112.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="partscount" type="Label" parent="missionsinprogress/squad2"]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 84.0
+offset_right = 615.0
+offset_bottom = 112.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="moneycount" type="Label" parent="missionsinprogress/squad2"]
+layout_mode = 0
+offset_left = 660.0
+offset_top = 70.0
+offset_right = 730.0
+offset_bottom = 98.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="missionname" type="RichTextLabel" parent="missionsinprogress/squad2"]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 63.0
+offset_right = 374.0
+offset_bottom = 112.0
+theme_override_fonts/normal_font = ExtResource("2_8ckgc")
+text = "En base"
+
+[node name="victchancelbl" type="Label" parent="missionsinprogress/squad2"]
+layout_mode = 0
+offset_left = 707.0
+offset_top = 10.0
+offset_right = 942.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "Prob. de victoria"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="daysleftnum" type="Label" parent="missionsinprogress/squad2"]
+layout_mode = 0
+offset_left = 970.0
+offset_top = 59.0
+offset_right = 1177.0
+offset_bottom = 101.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "????"
+horizontal_alignment = 1
+
+[node name="prbwinchancenum" type="Label" parent="missionsinprogress/squad2"]
+layout_mode = 0
+offset_left = 711.0
+offset_top = 64.0
+offset_right = 942.0
+offset_bottom = 106.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "????"
+horizontal_alignment = 1
+
+[node name="squad3" type="Panel" parent="missionsinprogress"]
+layout_mode = 0
+offset_left = -320.0
+offset_top = 331.0
+offset_right = 864.0
+offset_bottom = 451.0
+
+[node name="squadlbl" type="Label" parent="missionsinprogress/squad3"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 187.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "Escuadrón 3"
+
+[node name="missionlbl" type="Label" parent="missionsinprogress/squad3"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 60.0
+offset_right = 80.0
+offset_bottom = 88.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "Misión:"
+
+[node name="reward" type="Label" parent="missionsinprogress/squad3"]
+layout_mode = 0
+offset_left = 374.0
+offset_top = 10.0
+offset_right = 559.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "Recompensa"
+
+[node name="daysleft" type="Label" parent="missionsinprogress/squad3"]
+layout_mode = 0
+offset_left = 970.0
+offset_top = 10.0
+offset_right = 1177.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "Días restantes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Ammo" type="Sprite2D" parent="missionsinprogress/squad3"]
+position = Vector2(391.75, 66.625)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("2_8cd0c")
+
+[node name="Constmats" type="Sprite2D" parent="missionsinprogress/squad3"]
+position = Vector2(392, 98)
+scale = Vector2(0.03, 0.034)
+texture = ExtResource("3_gi15n")
+
+[node name="Rations" type="Sprite2D" parent="missionsinprogress/squad3"]
+position = Vector2(518, 68.5)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("4_7qw6o")
+
+[node name="Parts" type="Sprite2D" parent="missionsinprogress/squad3"]
+position = Vector2(519, 100)
+scale = Vector2(0.03, 0.032)
+texture = ExtResource("5_rkfsk")
+
+[node name="Warbucks" type="Sprite2D" parent="missionsinprogress/squad3"]
+position = Vector2(630, 84)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("6_np362")
+
+[node name="ammocount" type="Label" parent="missionsinprogress/squad3"]
+layout_mode = 0
+offset_left = 410.0
+offset_top = 53.0
+offset_right = 480.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="rationcount" type="Label" parent="missionsinprogress/squad3"]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 53.0
+offset_right = 615.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="constpartscount" type="Label" parent="missionsinprogress/squad3"]
+layout_mode = 0
+offset_left = 410.0
+offset_top = 84.0
+offset_right = 480.0
+offset_bottom = 112.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="partscount" type="Label" parent="missionsinprogress/squad3"]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 84.0
+offset_right = 615.0
+offset_bottom = 112.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="moneycount" type="Label" parent="missionsinprogress/squad3"]
+layout_mode = 0
+offset_left = 660.0
+offset_top = 70.0
+offset_right = 730.0
+offset_bottom = 98.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="missionname" type="RichTextLabel" parent="missionsinprogress/squad3"]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 63.0
+offset_right = 374.0
+offset_bottom = 112.0
+theme_override_fonts/normal_font = ExtResource("2_8ckgc")
+text = "En base"
+
+[node name="victchancelbl" type="Label" parent="missionsinprogress/squad3"]
+layout_mode = 0
+offset_left = 707.0
+offset_top = 10.0
+offset_right = 942.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "Prob. de victoria"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="daysleftnum" type="Label" parent="missionsinprogress/squad3"]
+layout_mode = 0
+offset_left = 970.0
+offset_top = 59.0
+offset_right = 1177.0
+offset_bottom = 101.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "????"
+horizontal_alignment = 1
+
+[node name="prbwinchancenum" type="Label" parent="missionsinprogress/squad3"]
+layout_mode = 0
+offset_left = 711.0
+offset_top = 64.0
+offset_right = 942.0
+offset_bottom = 106.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "????"
+horizontal_alignment = 1
+
+[node name="squad4" type="Panel" parent="missionsinprogress"]
+layout_mode = 0
+offset_left = -320.0
+offset_top = 462.0
+offset_right = 864.0
+offset_bottom = 582.0
+
+[node name="squadlbl" type="Label" parent="missionsinprogress/squad4"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 187.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "Escuadrón 4"
+
+[node name="missionlbl" type="Label" parent="missionsinprogress/squad4"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 60.0
+offset_right = 80.0
+offset_bottom = 88.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "Misión:"
+
+[node name="reward" type="Label" parent="missionsinprogress/squad4"]
+layout_mode = 0
+offset_left = 374.0
+offset_top = 10.0
+offset_right = 559.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "Recompensa"
+
+[node name="daysleft" type="Label" parent="missionsinprogress/squad4"]
+layout_mode = 0
+offset_left = 970.0
+offset_top = 10.0
+offset_right = 1177.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "Días restantes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Ammo" type="Sprite2D" parent="missionsinprogress/squad4"]
+position = Vector2(391.75, 66.625)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("2_8cd0c")
+
+[node name="Constmats" type="Sprite2D" parent="missionsinprogress/squad4"]
+position = Vector2(392, 98)
+scale = Vector2(0.03, 0.034)
+texture = ExtResource("3_gi15n")
+
+[node name="Rations" type="Sprite2D" parent="missionsinprogress/squad4"]
+position = Vector2(518, 68.5)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("4_7qw6o")
+
+[node name="Parts" type="Sprite2D" parent="missionsinprogress/squad4"]
+position = Vector2(519, 100)
+scale = Vector2(0.03, 0.032)
+texture = ExtResource("5_rkfsk")
+
+[node name="Warbucks" type="Sprite2D" parent="missionsinprogress/squad4"]
+position = Vector2(630, 84)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("6_np362")
+
+[node name="ammocount" type="Label" parent="missionsinprogress/squad4"]
+layout_mode = 0
+offset_left = 410.0
+offset_top = 53.0
+offset_right = 480.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="rationcount" type="Label" parent="missionsinprogress/squad4"]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 53.0
+offset_right = 615.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="constpartscount" type="Label" parent="missionsinprogress/squad4"]
+layout_mode = 0
+offset_left = 410.0
+offset_top = 84.0
+offset_right = 480.0
+offset_bottom = 112.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="partscount" type="Label" parent="missionsinprogress/squad4"]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 84.0
+offset_right = 615.0
+offset_bottom = 112.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="moneycount" type="Label" parent="missionsinprogress/squad4"]
+layout_mode = 0
+offset_left = 660.0
+offset_top = 70.0
+offset_right = 730.0
+offset_bottom = 98.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="missionname" type="RichTextLabel" parent="missionsinprogress/squad4"]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 63.0
+offset_right = 374.0
+offset_bottom = 112.0
+theme_override_fonts/normal_font = ExtResource("2_8ckgc")
+text = "En base"
+
+[node name="victchancelbl" type="Label" parent="missionsinprogress/squad4"]
+layout_mode = 0
+offset_left = 707.0
+offset_top = 10.0
+offset_right = 942.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "Prob. de victoria"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="daysleftnum" type="Label" parent="missionsinprogress/squad4"]
+layout_mode = 0
+offset_left = 970.0
+offset_top = 59.0
+offset_right = 1177.0
+offset_bottom = 101.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "????"
+horizontal_alignment = 1
+
+[node name="prbwinchancenum" type="Label" parent="missionsinprogress/squad4"]
+layout_mode = 0
+offset_left = 711.0
+offset_top = 64.0
+offset_right = 942.0
+offset_bottom = 106.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "????"
+horizontal_alignment = 1
+
+[node name="squad5" type="Panel" parent="missionsinprogress"]
+layout_mode = 0
+offset_left = -320.0
+offset_top = 593.0
+offset_right = 864.0
+offset_bottom = 713.0
+
+[node name="squadlbl" type="Label" parent="missionsinprogress/squad5"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 187.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "Escuadrón 5"
+
+[node name="missionlbl" type="Label" parent="missionsinprogress/squad5"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 60.0
+offset_right = 80.0
+offset_bottom = 88.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "Misión:"
+
+[node name="reward" type="Label" parent="missionsinprogress/squad5"]
+layout_mode = 0
+offset_left = 374.0
+offset_top = 10.0
+offset_right = 559.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "Recompensa"
+
+[node name="daysleft" type="Label" parent="missionsinprogress/squad5"]
+layout_mode = 0
+offset_left = 970.0
+offset_top = 10.0
+offset_right = 1177.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "Días restantes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Ammo" type="Sprite2D" parent="missionsinprogress/squad5"]
+position = Vector2(391.75, 66.625)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("2_8cd0c")
+
+[node name="Constmats" type="Sprite2D" parent="missionsinprogress/squad5"]
+position = Vector2(392, 98)
+scale = Vector2(0.03, 0.034)
+texture = ExtResource("3_gi15n")
+
+[node name="Rations" type="Sprite2D" parent="missionsinprogress/squad5"]
+position = Vector2(518, 68.5)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("4_7qw6o")
+
+[node name="Parts" type="Sprite2D" parent="missionsinprogress/squad5"]
+position = Vector2(519, 100)
+scale = Vector2(0.03, 0.032)
+texture = ExtResource("5_rkfsk")
+
+[node name="Warbucks" type="Sprite2D" parent="missionsinprogress/squad5"]
+position = Vector2(630, 84)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("6_np362")
+
+[node name="ammocount" type="Label" parent="missionsinprogress/squad5"]
+layout_mode = 0
+offset_left = 410.0
+offset_top = 53.0
+offset_right = 480.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="rationcount" type="Label" parent="missionsinprogress/squad5"]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 53.0
+offset_right = 615.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="constpartscount" type="Label" parent="missionsinprogress/squad5"]
+layout_mode = 0
+offset_left = 410.0
+offset_top = 84.0
+offset_right = 480.0
+offset_bottom = 112.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="partscount" type="Label" parent="missionsinprogress/squad5"]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 84.0
+offset_right = 615.0
+offset_bottom = 112.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="moneycount" type="Label" parent="missionsinprogress/squad5"]
+layout_mode = 0
+offset_left = 660.0
+offset_top = 70.0
+offset_right = 730.0
+offset_bottom = 98.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="missionname" type="RichTextLabel" parent="missionsinprogress/squad5"]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 63.0
+offset_right = 374.0
+offset_bottom = 112.0
+theme_override_fonts/normal_font = ExtResource("2_8ckgc")
+text = "En base"
+
+[node name="victchancelbl" type="Label" parent="missionsinprogress/squad5"]
+layout_mode = 0
+offset_left = 707.0
+offset_top = 10.0
+offset_right = 942.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "Prob. de victoria"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="daysleftnum" type="Label" parent="missionsinprogress/squad5"]
+layout_mode = 0
+offset_left = 970.0
+offset_top = 59.0
+offset_right = 1177.0
+offset_bottom = 101.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "????"
+horizontal_alignment = 1
+
+[node name="prbwinchancenum" type="Label" parent="missionsinprogress/squad5"]
+layout_mode = 0
+offset_left = 711.0
+offset_top = 64.0
+offset_right = 942.0
+offset_bottom = 106.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "????"
+horizontal_alignment = 1
+
+[node name="squad3locked" type="ColorRect" parent="missionsinprogress"]
+layout_mode = 0
+offset_left = -320.0
+offset_top = 331.0
+offset_right = 864.0
+offset_bottom = 453.0
+color = Color(0, 0, 0, 0.819608)
+
+[node name="squad4locked" type="ColorRect" parent="missionsinprogress"]
+layout_mode = 0
+offset_left = -320.0
+offset_top = 462.0
+offset_right = 864.0
+offset_bottom = 584.0
+color = Color(0, 0, 0, 0.819608)
+
+[node name="squad5locked" type="ColorRect" parent="missionsinprogress"]
+layout_mode = 0
+offset_left = -320.0
+offset_top = 593.0
+offset_right = 864.0
+offset_bottom = 715.0
+color = Color(0, 0, 0, 0.819608)
+
+[node name="passday" type="Panel" parent="."]
+visible = false
+offset_left = 312.0
+offset_top = 376.0
+offset_right = 1542.0
+offset_bottom = 682.0
+
+[node name="ColorRect" type="ColorRect" parent="passday"]
+layout_mode = 0
+offset_top = 85.0
+offset_right = 1230.0
+offset_bottom = 306.0
+color = Color(0.18359, 0.18359, 0.18359, 1)
+
+[node name="tlbg" type="ColorRect" parent="passday"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 1230.0
+offset_bottom = 85.0
+color = Color(0, 0, 0, 1)
+
+[node name="tl" type="Label" parent="passday"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 1230.0
+offset_bottom = 84.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 42
+text = "Finalizar planes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="closescreen" type="Button" parent="passday"]
+layout_mode = 0
+offset_left = 1120.0
+offset_top = 1.0
+offset_right = 1230.0
+offset_bottom = 84.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 50
+text = "x"
+flat = true
+icon_alignment = 1
+
+[node name="yesbuy" type="Button" parent="passday"]
+layout_mode = 0
+offset_left = 878.0
+offset_top = 100.0
+offset_right = 1063.0
+offset_bottom = 167.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "Confirmar"
+
+[node name="nobuy" type="Button" parent="passday"]
+layout_mode = 0
+offset_left = 878.0
+offset_top = 207.0
+offset_right = 1069.0
+offset_bottom = 274.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "Denegar"
+
+[node name="tl2" type="Label" parent="passday"]
+layout_mode = 0
+offset_top = 100.0
+offset_right = 878.0
+offset_bottom = 232.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "¿Seguro que quieres finalizar tus planes y 
+pasar al siguiente día del conflicto? El sueldo total de tus
+soldados será"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Warbucks" type="Sprite2D" parent="passday"]
+position = Vector2(511, 250)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("6_np362")
+
+[node name="moneycount" type="Label" parent="passday"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.142276
+anchor_top = 0.477124
+anchor_right = -0.096748
+anchor_bottom = 0.519608
+offset_left = 511.0
+offset_top = 79.0
+offset_right = 579.0
+offset_bottom = 121.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 40
+text = "9999"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="dailyreport" type="Panel" parent="."]
+visible = false
+offset_left = 690.0
+offset_top = 220.0
+offset_right = 1230.0
+offset_bottom = 920.0
+theme = SubResource("Theme_1201h")
+
+[node name="infobg" type="ColorRect" parent="dailyreport"]
+layout_mode = 0
+offset_left = -329.0
+offset_right = 872.0
+offset_bottom = 723.0
+color = Color(0.277528, 0.277528, 0.277528, 1)
+
+[node name="titleBG" type="ColorRect" parent="dailyreport"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = -329.0
+offset_right = 872.0
+offset_bottom = 60.0
+
+[node name="backbtn" type="Button" parent="dailyreport"]
+layout_mode = 0
+offset_left = 724.0
+offset_right = 872.0
+offset_bottom = 60.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 40
+text = "x"
+
+[node name="titlemission" type="Label" parent="dailyreport"]
+layout_mode = 0
+offset_left = -329.0
+offset_right = 872.0
+offset_bottom = 60.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "Informe de estado diario"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="squad1" type="Panel" parent="dailyreport"]
+layout_mode = 0
+offset_left = -320.0
+offset_top = 69.0
+offset_right = 864.0
+offset_bottom = 189.0
+
+[node name="squadlbl" type="Label" parent="dailyreport/squad1"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 187.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "Escuadrón 1"
+
+[node name="missionlbl" type="Label" parent="dailyreport/squad1"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 60.0
+offset_right = 80.0
+offset_bottom = 88.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "Misión:"
+
+[node name="reward" type="Label" parent="dailyreport/squad1"]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 10.0
+offset_right = 730.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "Recompensa"
+
+[node name="Ammo" type="Sprite2D" parent="dailyreport/squad1"]
+position = Vector2(562.75, 66.625)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("2_8cd0c")
+
+[node name="Constmats" type="Sprite2D" parent="dailyreport/squad1"]
+position = Vector2(563, 98)
+scale = Vector2(0.03, 0.034)
+texture = ExtResource("3_gi15n")
+
+[node name="Rations" type="Sprite2D" parent="dailyreport/squad1"]
+position = Vector2(689, 68.5)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("4_7qw6o")
+
+[node name="Parts" type="Sprite2D" parent="dailyreport/squad1"]
+position = Vector2(690, 100)
+scale = Vector2(0.03, 0.032)
+texture = ExtResource("5_rkfsk")
+
+[node name="Warbucks" type="Sprite2D" parent="dailyreport/squad1"]
+position = Vector2(801, 84)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("6_np362")
+
+[node name="ammocount" type="Label" parent="dailyreport/squad1"]
+layout_mode = 0
+offset_left = 581.0
+offset_top = 53.0
+offset_right = 651.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="rationcount" type="Label" parent="dailyreport/squad1"]
+layout_mode = 0
+offset_left = 716.0
+offset_top = 53.0
+offset_right = 786.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="constpartscount" type="Label" parent="dailyreport/squad1"]
+layout_mode = 0
+offset_left = 581.0
+offset_top = 84.0
+offset_right = 651.0
+offset_bottom = 112.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="partscount" type="Label" parent="dailyreport/squad1"]
+layout_mode = 0
+offset_left = 716.0
+offset_top = 84.0
+offset_right = 786.0
+offset_bottom = 112.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="moneycount" type="Label" parent="dailyreport/squad1"]
+layout_mode = 0
+offset_left = 831.0
+offset_top = 70.0
+offset_right = 901.0
+offset_bottom = 98.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="missionname" type="RichTextLabel" parent="dailyreport/squad1"]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 63.0
+offset_right = 385.0
+offset_bottom = 112.0
+theme_override_fonts/normal_font = ExtResource("2_8ckgc")
+text = "En base"
+
+[node name="victchancelbl" type="Label" parent="dailyreport/squad1"]
+layout_mode = 0
+offset_left = 921.0
+offset_top = 10.0
+offset_right = 1168.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 25
+text = "Estado de misión"
+
+[node name="prbwinchancenum" type="Label" parent="dailyreport/squad1"]
+layout_mode = 0
+offset_left = 921.0
+offset_top = 64.0
+offset_right = 1168.0
+offset_bottom = 106.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "????"
+horizontal_alignment = 1
+
+[node name="squad2" type="Panel" parent="dailyreport"]
+layout_mode = 0
+offset_left = -320.0
+offset_top = 200.0
+offset_right = 864.0
+offset_bottom = 320.0
+
+[node name="squadlbl" type="Label" parent="dailyreport/squad2"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 187.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "Escuadrón 2"
+
+[node name="missionlbl" type="Label" parent="dailyreport/squad2"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 60.0
+offset_right = 80.0
+offset_bottom = 88.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "Misión:"
+
+[node name="reward" type="Label" parent="dailyreport/squad2"]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 10.0
+offset_right = 730.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "Recompensa"
+
+[node name="Ammo" type="Sprite2D" parent="dailyreport/squad2"]
+position = Vector2(562.75, 66.625)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("2_8cd0c")
+
+[node name="Constmats" type="Sprite2D" parent="dailyreport/squad2"]
+position = Vector2(563, 98)
+scale = Vector2(0.03, 0.034)
+texture = ExtResource("3_gi15n")
+
+[node name="Rations" type="Sprite2D" parent="dailyreport/squad2"]
+position = Vector2(689, 68.5)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("4_7qw6o")
+
+[node name="Parts" type="Sprite2D" parent="dailyreport/squad2"]
+position = Vector2(690, 100)
+scale = Vector2(0.03, 0.032)
+texture = ExtResource("5_rkfsk")
+
+[node name="Warbucks" type="Sprite2D" parent="dailyreport/squad2"]
+position = Vector2(801, 84)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("6_np362")
+
+[node name="ammocount" type="Label" parent="dailyreport/squad2"]
+layout_mode = 0
+offset_left = 581.0
+offset_top = 53.0
+offset_right = 651.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="rationcount" type="Label" parent="dailyreport/squad2"]
+layout_mode = 0
+offset_left = 716.0
+offset_top = 53.0
+offset_right = 786.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="constpartscount" type="Label" parent="dailyreport/squad2"]
+layout_mode = 0
+offset_left = 581.0
+offset_top = 84.0
+offset_right = 651.0
+offset_bottom = 112.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="partscount" type="Label" parent="dailyreport/squad2"]
+layout_mode = 0
+offset_left = 716.0
+offset_top = 84.0
+offset_right = 786.0
+offset_bottom = 112.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="moneycount" type="Label" parent="dailyreport/squad2"]
+layout_mode = 0
+offset_left = 831.0
+offset_top = 70.0
+offset_right = 901.0
+offset_bottom = 98.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="missionname" type="RichTextLabel" parent="dailyreport/squad2"]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 64.0
+offset_right = 385.0
+offset_bottom = 113.0
+theme_override_fonts/normal_font = ExtResource("2_8ckgc")
+text = "En base"
+
+[node name="victchancelbl" type="Label" parent="dailyreport/squad2"]
+layout_mode = 0
+offset_left = 921.0
+offset_top = 10.0
+offset_right = 1168.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 25
+text = "Estado de misión"
+
+[node name="prbwinchancenum" type="Label" parent="dailyreport/squad2"]
+layout_mode = 0
+offset_left = 921.0
+offset_top = 64.0
+offset_right = 1168.0
+offset_bottom = 106.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "????"
+horizontal_alignment = 1
+
+[node name="squad3" type="Panel" parent="dailyreport"]
+layout_mode = 0
+offset_left = -320.0
+offset_top = 331.0
+offset_right = 864.0
+offset_bottom = 451.0
+
+[node name="squadlbl" type="Label" parent="dailyreport/squad3"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 187.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "Escuadrón 3"
+
+[node name="missionlbl" type="Label" parent="dailyreport/squad3"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 60.0
+offset_right = 80.0
+offset_bottom = 88.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "Misión:"
+
+[node name="reward" type="Label" parent="dailyreport/squad3"]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 10.0
+offset_right = 730.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "Recompensa"
+
+[node name="Ammo" type="Sprite2D" parent="dailyreport/squad3"]
+position = Vector2(562.75, 66.625)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("2_8cd0c")
+
+[node name="Constmats" type="Sprite2D" parent="dailyreport/squad3"]
+position = Vector2(563, 98)
+scale = Vector2(0.03, 0.034)
+texture = ExtResource("3_gi15n")
+
+[node name="Rations" type="Sprite2D" parent="dailyreport/squad3"]
+position = Vector2(689, 68.5)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("4_7qw6o")
+
+[node name="Parts" type="Sprite2D" parent="dailyreport/squad3"]
+position = Vector2(690, 100)
+scale = Vector2(0.03, 0.032)
+texture = ExtResource("5_rkfsk")
+
+[node name="Warbucks" type="Sprite2D" parent="dailyreport/squad3"]
+position = Vector2(801, 84)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("6_np362")
+
+[node name="ammocount" type="Label" parent="dailyreport/squad3"]
+layout_mode = 0
+offset_left = 581.0
+offset_top = 53.0
+offset_right = 651.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="rationcount" type="Label" parent="dailyreport/squad3"]
+layout_mode = 0
+offset_left = 716.0
+offset_top = 53.0
+offset_right = 786.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="constpartscount" type="Label" parent="dailyreport/squad3"]
+layout_mode = 0
+offset_left = 581.0
+offset_top = 84.0
+offset_right = 651.0
+offset_bottom = 112.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="partscount" type="Label" parent="dailyreport/squad3"]
+layout_mode = 0
+offset_left = 716.0
+offset_top = 84.0
+offset_right = 786.0
+offset_bottom = 112.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="moneycount" type="Label" parent="dailyreport/squad3"]
+layout_mode = 0
+offset_left = 831.0
+offset_top = 70.0
+offset_right = 901.0
+offset_bottom = 98.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="missionname" type="RichTextLabel" parent="dailyreport/squad3"]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 64.0
+offset_right = 385.0
+offset_bottom = 113.0
+theme_override_fonts/normal_font = ExtResource("2_8ckgc")
+text = "En base"
+
+[node name="victchancelbl" type="Label" parent="dailyreport/squad3"]
+layout_mode = 0
+offset_left = 921.0
+offset_top = 10.0
+offset_right = 1168.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 25
+text = "Estado de misión"
+
+[node name="prbwinchancenum" type="Label" parent="dailyreport/squad3"]
+layout_mode = 0
+offset_left = 921.0
+offset_top = 64.0
+offset_right = 1168.0
+offset_bottom = 106.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "????"
+horizontal_alignment = 1
+
+[node name="squad4" type="Panel" parent="dailyreport"]
+layout_mode = 0
+offset_left = -320.0
+offset_top = 462.0
+offset_right = 864.0
+offset_bottom = 582.0
+
+[node name="squadlbl" type="Label" parent="dailyreport/squad4"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 187.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "Escuadrón 4"
+
+[node name="missionlbl" type="Label" parent="dailyreport/squad4"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 60.0
+offset_right = 80.0
+offset_bottom = 88.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "Misión:"
+
+[node name="reward" type="Label" parent="dailyreport/squad4"]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 10.0
+offset_right = 730.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "Recompensa"
+
+[node name="Ammo" type="Sprite2D" parent="dailyreport/squad4"]
+position = Vector2(562.75, 66.625)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("2_8cd0c")
+
+[node name="Constmats" type="Sprite2D" parent="dailyreport/squad4"]
+position = Vector2(563, 98)
+scale = Vector2(0.03, 0.034)
+texture = ExtResource("3_gi15n")
+
+[node name="Rations" type="Sprite2D" parent="dailyreport/squad4"]
+position = Vector2(689, 68.5)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("4_7qw6o")
+
+[node name="Parts" type="Sprite2D" parent="dailyreport/squad4"]
+position = Vector2(690, 100)
+scale = Vector2(0.03, 0.032)
+texture = ExtResource("5_rkfsk")
+
+[node name="Warbucks" type="Sprite2D" parent="dailyreport/squad4"]
+position = Vector2(801, 84)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("6_np362")
+
+[node name="ammocount" type="Label" parent="dailyreport/squad4"]
+layout_mode = 0
+offset_left = 581.0
+offset_top = 53.0
+offset_right = 651.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="rationcount" type="Label" parent="dailyreport/squad4"]
+layout_mode = 0
+offset_left = 716.0
+offset_top = 53.0
+offset_right = 786.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="constpartscount" type="Label" parent="dailyreport/squad4"]
+layout_mode = 0
+offset_left = 581.0
+offset_top = 84.0
+offset_right = 651.0
+offset_bottom = 112.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="partscount" type="Label" parent="dailyreport/squad4"]
+layout_mode = 0
+offset_left = 716.0
+offset_top = 84.0
+offset_right = 786.0
+offset_bottom = 112.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="moneycount" type="Label" parent="dailyreport/squad4"]
+layout_mode = 0
+offset_left = 831.0
+offset_top = 70.0
+offset_right = 901.0
+offset_bottom = 98.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="missionname" type="RichTextLabel" parent="dailyreport/squad4"]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 64.0
+offset_right = 385.0
+offset_bottom = 113.0
+theme_override_fonts/normal_font = ExtResource("2_8ckgc")
+text = "En base"
+
+[node name="victchancelbl" type="Label" parent="dailyreport/squad4"]
+layout_mode = 0
+offset_left = 921.0
+offset_top = 10.0
+offset_right = 1168.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 25
+text = "Estado de misión"
+
+[node name="prbwinchancenum" type="Label" parent="dailyreport/squad4"]
+layout_mode = 0
+offset_left = 921.0
+offset_top = 64.0
+offset_right = 1168.0
+offset_bottom = 106.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "????"
+horizontal_alignment = 1
+
+[node name="squad5" type="Panel" parent="dailyreport"]
+layout_mode = 0
+offset_left = -320.0
+offset_top = 593.0
+offset_right = 864.0
+offset_bottom = 713.0
+
+[node name="squadlbl" type="Label" parent="dailyreport/squad5"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 187.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "Escuadrón 5"
+
+[node name="missionlbl" type="Label" parent="dailyreport/squad5"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 60.0
+offset_right = 80.0
+offset_bottom = 88.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "Misión:"
+
+[node name="reward" type="Label" parent="dailyreport/squad5"]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 10.0
+offset_right = 730.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "Recompensa"
+
+[node name="Ammo" type="Sprite2D" parent="dailyreport/squad5"]
+position = Vector2(562.75, 66.625)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("2_8cd0c")
+
+[node name="Constmats" type="Sprite2D" parent="dailyreport/squad5"]
+position = Vector2(563, 98)
+scale = Vector2(0.03, 0.034)
+texture = ExtResource("3_gi15n")
+
+[node name="Rations" type="Sprite2D" parent="dailyreport/squad5"]
+position = Vector2(689, 68.5)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("4_7qw6o")
+
+[node name="Parts" type="Sprite2D" parent="dailyreport/squad5"]
+position = Vector2(690, 100)
+scale = Vector2(0.03, 0.032)
+texture = ExtResource("5_rkfsk")
+
+[node name="Warbucks" type="Sprite2D" parent="dailyreport/squad5"]
+position = Vector2(801, 84)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("6_np362")
+
+[node name="ammocount" type="Label" parent="dailyreport/squad5"]
+layout_mode = 0
+offset_left = 581.0
+offset_top = 53.0
+offset_right = 651.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="rationcount" type="Label" parent="dailyreport/squad5"]
+layout_mode = 0
+offset_left = 716.0
+offset_top = 53.0
+offset_right = 786.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="constpartscount" type="Label" parent="dailyreport/squad5"]
+layout_mode = 0
+offset_left = 581.0
+offset_top = 84.0
+offset_right = 651.0
+offset_bottom = 112.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="partscount" type="Label" parent="dailyreport/squad5"]
+layout_mode = 0
+offset_left = 716.0
+offset_top = 84.0
+offset_right = 786.0
+offset_bottom = 112.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="moneycount" type="Label" parent="dailyreport/squad5"]
+layout_mode = 0
+offset_left = 831.0
+offset_top = 70.0
+offset_right = 901.0
+offset_bottom = 98.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 20
+text = "????"
+
+[node name="missionname" type="RichTextLabel" parent="dailyreport/squad5"]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 64.0
+offset_right = 385.0
+offset_bottom = 113.0
+theme_override_fonts/normal_font = ExtResource("2_8ckgc")
+text = "En base"
+
+[node name="victchancelbl" type="Label" parent="dailyreport/squad5"]
+layout_mode = 0
+offset_left = 921.0
+offset_top = 10.0
+offset_right = 1168.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 25
+text = "Estado de misión"
+
+[node name="prbwinchancenum" type="Label" parent="dailyreport/squad5"]
+layout_mode = 0
+offset_left = 921.0
+offset_top = 64.0
+offset_right = 1168.0
+offset_bottom = 106.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 30
+text = "????"
+horizontal_alignment = 1
+
+[node name="squad3locked" type="ColorRect" parent="dailyreport"]
+layout_mode = 0
+offset_left = -320.0
+offset_top = 331.0
+offset_right = 864.0
+offset_bottom = 453.0
+color = Color(0, 0, 0, 0.819608)
+
+[node name="squad4locked" type="ColorRect" parent="dailyreport"]
+layout_mode = 0
+offset_left = -320.0
+offset_top = 462.0
+offset_right = 864.0
+offset_bottom = 584.0
+color = Color(0, 0, 0, 0.819608)
+
+[node name="squad5locked" type="ColorRect" parent="dailyreport"]
+layout_mode = 0
+offset_left = -320.0
+offset_top = 593.0
+offset_right = 864.0
+offset_bottom = 715.0
+color = Color(0, 0, 0, 0.819608)
+
+[node name="fallensoldiers" type="Panel" parent="."]
+visible = false
+offset_left = 348.0
+offset_top = 453.0
+offset_right = 1578.0
+offset_bottom = 759.0
+
+[node name="ColorRect" type="ColorRect" parent="fallensoldiers"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 85.0
+offset_right = 1231.0
+offset_bottom = 306.0
+color = Color(0.278431, 0.278431, 0.278431, 1)
+
+[node name="tlbg" type="ColorRect" parent="fallensoldiers"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 1231.0
+offset_bottom = 85.0
+color = Color(0, 0, 0, 1)
+
+[node name="closescreen" type="Button" parent="fallensoldiers"]
+layout_mode = 0
+offset_left = 1146.0
+offset_top = 2.0
+offset_right = 1231.0
+offset_bottom = 79.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 50
+text = "x"
+flat = true
+icon_alignment = 1
+
+[node name="tl" type="Label" parent="fallensoldiers"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 1231.0
+offset_bottom = 84.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 42
+text = "Soldados caídos en combate"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="squad1" type="Label" parent="fallensoldiers"]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 112.0
+offset_right = 244.0
+offset_bottom = 154.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 25
+text = "Escuadrón 1"
+
+[node name="soldier1" type="Label" parent="fallensoldiers/squad1"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 49.0
+offset_right = 95.0
+offset_bottom = 72.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+text = "Ninguno"
+
+[node name="soldier2" type="Label" parent="fallensoldiers/squad1"]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 49.0
+offset_right = 199.0
+offset_bottom = 72.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+text = "Ninguno"
+
+[node name="soldier3" type="Label" parent="fallensoldiers/squad1"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 93.0
+offset_right = 95.0
+offset_bottom = 116.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+text = "Ninguno"
+
+[node name="soldier4" type="Label" parent="fallensoldiers/squad1"]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 93.0
+offset_right = 199.0
+offset_bottom = 116.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+text = "Ninguno"
+
+[node name="soldier5" type="Label" parent="fallensoldiers/squad1"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 138.0
+offset_right = 146.0
+offset_bottom = 161.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+text = "Ninguno"
+
+[node name="squad2" type="Label" parent="fallensoldiers"]
+layout_mode = 0
+offset_left = 297.0
+offset_top = 112.0
+offset_right = 474.0
+offset_bottom = 154.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 25
+text = "Escuadrón 2"
+
+[node name="soldier1" type="Label" parent="fallensoldiers/squad2"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 49.0
+offset_right = 95.0
+offset_bottom = 72.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+text = "Ninguno"
+
+[node name="soldier2" type="Label" parent="fallensoldiers/squad2"]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 49.0
+offset_right = 199.0
+offset_bottom = 72.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+text = "Ninguno"
+
+[node name="soldier3" type="Label" parent="fallensoldiers/squad2"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 93.0
+offset_right = 95.0
+offset_bottom = 116.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+text = "Ninguno"
+
+[node name="soldier4" type="Label" parent="fallensoldiers/squad2"]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 93.0
+offset_right = 199.0
+offset_bottom = 116.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+text = "Ninguno"
+
+[node name="soldier5" type="Label" parent="fallensoldiers/squad2"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 138.0
+offset_right = 146.0
+offset_bottom = 161.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+text = "Ninguno"
+
+[node name="squad3" type="Label" parent="fallensoldiers"]
+layout_mode = 0
+offset_left = 527.0
+offset_top = 112.0
+offset_right = 704.0
+offset_bottom = 154.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 25
+text = "Escuadrón 3"
+
+[node name="soldier1" type="Label" parent="fallensoldiers/squad3"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 49.0
+offset_right = 95.0
+offset_bottom = 72.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+text = "Ninguno"
+
+[node name="soldier2" type="Label" parent="fallensoldiers/squad3"]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 49.0
+offset_right = 199.0
+offset_bottom = 72.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+text = "Ninguno"
+
+[node name="soldier3" type="Label" parent="fallensoldiers/squad3"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 93.0
+offset_right = 95.0
+offset_bottom = 116.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+text = "Ninguno"
+
+[node name="soldier4" type="Label" parent="fallensoldiers/squad3"]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 93.0
+offset_right = 199.0
+offset_bottom = 116.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+text = "Ninguno"
+
+[node name="soldier5" type="Label" parent="fallensoldiers/squad3"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 138.0
+offset_right = 146.0
+offset_bottom = 161.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+text = "Ninguno"
+
+[node name="squad4" type="Label" parent="fallensoldiers"]
+layout_mode = 0
+offset_left = 757.0
+offset_top = 112.0
+offset_right = 934.0
+offset_bottom = 154.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 25
+text = "Escuadrón 4"
+
+[node name="soldier1" type="Label" parent="fallensoldiers/squad4"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 49.0
+offset_right = 95.0
+offset_bottom = 72.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+text = "Ninguno"
+
+[node name="soldier2" type="Label" parent="fallensoldiers/squad4"]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 49.0
+offset_right = 199.0
+offset_bottom = 72.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+text = "Ninguno"
+
+[node name="soldier3" type="Label" parent="fallensoldiers/squad4"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 93.0
+offset_right = 95.0
+offset_bottom = 116.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+text = "Ninguno"
+
+[node name="soldier4" type="Label" parent="fallensoldiers/squad4"]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 93.0
+offset_right = 199.0
+offset_bottom = 116.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+text = "Ninguno"
+
+[node name="soldier5" type="Label" parent="fallensoldiers/squad4"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 138.0
+offset_right = 146.0
+offset_bottom = 161.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+text = "Ninguno"
+
+[node name="squad5" type="Label" parent="fallensoldiers"]
+layout_mode = 0
+offset_left = 987.0
+offset_top = 112.0
+offset_right = 1164.0
+offset_bottom = 154.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 25
+text = "Escuadrón 5"
+
+[node name="soldier1" type="Label" parent="fallensoldiers/squad5"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 49.0
+offset_right = 95.0
+offset_bottom = 72.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+text = "Ninguno"
+
+[node name="soldier2" type="Label" parent="fallensoldiers/squad5"]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 49.0
+offset_right = 199.0
+offset_bottom = 72.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+text = "Ninguno"
+
+[node name="soldier3" type="Label" parent="fallensoldiers/squad5"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 93.0
+offset_right = 95.0
+offset_bottom = 116.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+text = "Ninguno"
+
+[node name="soldier4" type="Label" parent="fallensoldiers/squad5"]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 93.0
+offset_right = 199.0
+offset_bottom = 116.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+text = "Ninguno"
+
+[node name="soldier5" type="Label" parent="fallensoldiers/squad5"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 138.0
+offset_right = 146.0
+offset_bottom = 161.0
+theme_override_fonts/font = ExtResource("2_8ckgc")
+text = "Ninguno"
+
+[node name="changedayanim" type="ColorRect" parent="."]
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="lost" type="Label" parent="."]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 691.0
+offset_top = 200.0
+offset_right = 1229.0
+offset_bottom = 310.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 80
+text = "Has perdido..."
+
+[node name="hidelost1" type="ColorRect" parent="."]
+visible = false
+offset_right = 1920.0
+offset_bottom = 338.0
+color = Color(0, 0, 0, 1)
+
+[node name="lost2" type="Label" parent="."]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 235.0
+offset_top = 359.0
+offset_right = 1700.0
+offset_bottom = 646.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 40
+text = "Te has quedado sin fondos. No puedes
+llevar a cabo nuevas misiones ni pagar a tus
+soldados... Las tres fuerzas no piensan ayudarte,
+para ellos eras un simple peón, forzándote a disolver
+tu PMC y volver a la vida civil.
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="hidelost2" type="ColorRect" parent="."]
+visible = false
+offset_top = 338.0
+offset_right = 1920.0
+offset_bottom = 676.0
+color = Color(0, 0, 0, 1)
+
+[node name="lost3" type="Label" parent="."]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 396.0
+offset_top = 901.0
+offset_right = 1284.0
+offset_bottom = 1011.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 80
+text = "Días de conflicto:"
+
+[node name="lost4" type="Label" parent="."]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 1298.0
+offset_top = 904.0
+offset_right = 1978.0
+offset_bottom = 1014.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 80
+text = "9999"
+
+[node name="quitbtn" type="Button" parent="."]
+visible = false
+offset_left = 810.0
+offset_top = 751.0
+offset_right = 1110.0
+offset_bottom = 851.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_8ckgc")
+theme_override_font_sizes/font_size = 50
+text = "SALIR"
+
+[connection signal="pressed" from="missioninprogbtn" to="." method="_on_missioninprogbtn_pressed"]
+[connection signal="pressed" from="infocontextbtn" to="." method="_on_infocontextbtn_pressed"]
+[connection signal="pressed" from="headquartersbtn" to="." method="_on_headquartersbtn_pressed"]
+[connection signal="pressed" from="enddaybtn" to="." method="_on_enddaybtn_pressed"]
+[connection signal="pressed" from="listmissionbtn" to="." method="_on_listmissionbtn_pressed"]
+[connection signal="pressed" from="contbas" to="." method="_on_contbas_pressed"]
+[connection signal="pressed" from="contadv" to="." method="_on_contadv_pressed"]
+[connection signal="pressed" from="buysoldier/closescreen" to="." method="_on_closescreen_pressed"]
+[connection signal="pressed" from="buysoldier/yesbuy" to="." method="_on_yesbuy_pressed"]
+[connection signal="pressed" from="buysoldier/nobuy" to="." method="_on_nobuy_pressed"]
+[connection signal="pressed" from="contextinfo/backbtn" to="." method="_on_backbtn_pressed"]
+[connection signal="toggled" from="contextinfo/context" to="contextinfo" method="_on_context_toggled"]
+[connection signal="toggled" from="contextinfo/basicinfo" to="contextinfo" method="_on_basicinfo_toggled"]
+[connection signal="toggled" from="contextinfo/soldier" to="contextinfo" method="_on_soldier_toggled"]
+[connection signal="toggled" from="contextinfo/missionmenu" to="contextinfo" method="_on_missionmenu_toggled"]
+[connection signal="toggled" from="contextinfo/headquarters" to="contextinfo" method="_on_headquarters_toggled"]
+[connection signal="toggled" from="contextinfo/blackmarket" to="contextinfo" method="_on_blackmarket_toggled"]
+[connection signal="pressed" from="missionsinprogress/backbtn" to="." method="_on_backbtnprog_pressed"]
+[connection signal="pressed" from="passday/closescreen" to="." method="_on_closescreenendday_pressed"]
+[connection signal="pressed" from="passday/yesbuy" to="." method="_on_yesendday_pressed"]
+[connection signal="pressed" from="passday/nobuy" to="." method="_on_nopayday_pressed"]
+[connection signal="pressed" from="dailyreport/backbtn" to="." method="_on_backbtnreport_pressed"]
+[connection signal="pressed" from="fallensoldiers/closescreen" to="." method="_on_closescreenfallen_pressed"]
+[connection signal="pressed" from="quitbtn" to="." method="_on_quitbtn_pressed"]
