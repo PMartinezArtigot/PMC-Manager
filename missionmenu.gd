@@ -282,7 +282,8 @@ func winlose(boul):
 func losehealth(missionchosen):
 	var losthealth = 100 - Global.currentmissions[missionchosen][6]
 	for i in Global.allsquads[missionchosen].size():
-		Global.allsquads[missionchosen][i][2] = Global.allsquads[missionchosen][i][2] - losthealth - randi_range(1, 10) 
+		if (Global.allsquads[missionchosen][i][0] != "Vacío"):
+			Global.allsquads[missionchosen][i][2] = Global.allsquads[missionchosen][i][2] - losthealth - randi_range(1, 10) 
 
 
 func _on_closescreenfallen_pressed():

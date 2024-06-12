@@ -67,7 +67,7 @@ NUOrescuehostages, EPEclearbase, FLRassassination]
 #10. MED 11. ENG 12. hab 13. assigned squad
 
 
-var squad1 = [["Fence", 1200, 100, 0, 0, 0, 0, "A", "E", "C", "C", "E", "Ninguna", "1"],
+var squad1 = [["Fence", 1200, 50, 0, 0, 0, 0, "A", "E", "C", "C", "E", "Ninguna", "1"],
  ["Skif", 750, 100, 0, 0, 0, 0, "F", "D", "D", "F", "C", "Ninguna", "1"],
  ["Philip", 600, 100, 0, 0, 0, 0, "C", "D", "E", "F", "E", "Ninguna", "1"],
  ["Yuri", 800, 100, 0, 0, 0, 0, "C", "B", "C", "F", "F", "Ninguna", "1"],
@@ -182,7 +182,8 @@ func wipedeadsoldier():
 	["Ninguno", "Ninguno", "Ninguno", "Ninguno", "Ninguno"]]
 
 func losestate():
-	if (money == 0):
+	if (money <= 0):
+		money = 0
 		return true
 
 func winstate():

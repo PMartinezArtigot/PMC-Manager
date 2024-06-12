@@ -298,7 +298,9 @@ func disableassign():
 
 
 func _on_assignsquad_pressed():
-	var rationcost = (100 - Global.allsquads[selectedsquad][selectedsoldier][2]) / 2
+	print(Global.allsquads[selectedsquad][selectedsoldier][2])
+	var rationcost = round((100 - (Global.allsquads[selectedsquad][selectedsoldier][2])) / 2)
+	int(rationcost)
 	$assignsquadscreen/rationcount.text = str(rationcost)
 	$assignsquadscreen.show()
 
@@ -332,7 +334,7 @@ func disablesquad(squadnum, disena):
 
 
 func _on_yesheal_pressed():
-	Global.ration = Global.ration - ((100 - Global.allsquads[selectedsquad][selectedsoldier][2]) / 2)
+	Global.ration = Global.ration - round((100 - (Global.allsquads[selectedsquad][selectedsoldier][2])) / 2)
 	Global.allsquads[selectedsquad][selectedsoldier][2] = 100
 	soldierinfo(selectedsquad, selectedsoldier)
 	$assignsquadscreen.hide()

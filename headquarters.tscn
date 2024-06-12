@@ -1851,6 +1851,7 @@ layout_mode = 0
 offset_left = 1.0
 offset_right = 1231.0
 offset_bottom = 84.0
+theme_override_fonts/font = ExtResource("2_m1slk")
 theme_override_font_sizes/font_size = 42
 text = "Asignar escuadrón"
 horizontal_alignment = 1
@@ -1863,6 +1864,7 @@ offset_top = 2.0
 offset_right = 1231.0
 offset_bottom = 79.0
 mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_m1slk")
 theme_override_font_sizes/font_size = 50
 text = "x"
 flat = true
@@ -1870,64 +1872,69 @@ icon_alignment = 1
 
 [node name="squad1" type="Button" parent="barracks/assignsquadscreen"]
 layout_mode = 0
-offset_left = 108.0
+offset_left = 28.0
 offset_top = 158.0
-offset_right = 293.0
+offset_right = 266.0
 offset_bottom = 225.0
 mouse_default_cursor_shape = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("2_m1slk")
+theme_override_font_sizes/font_size = 25
 text = "Escuadrón 1"
 
 [node name="squad2" type="Button" parent="barracks/assignsquadscreen"]
 layout_mode = 0
-offset_left = 312.0
-offset_top = 157.0
-offset_right = 497.0
-offset_bottom = 224.0
-mouse_default_cursor_shape = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_font_sizes/font_size = 30
-text = "Escuadrón 2"
-
-[node name="squad3" type="Button" parent="barracks/assignsquadscreen"]
-layout_mode = 0
-offset_left = 518.0
+offset_left = 266.0
 offset_top = 158.0
-offset_right = 703.0
+offset_right = 512.0
 offset_bottom = 225.0
 mouse_default_cursor_shape = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("2_m1slk")
+theme_override_font_sizes/font_size = 25
+text = "Escuadrón 2"
+
+[node name="squad3" type="Button" parent="barracks/assignsquadscreen"]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 158.0
+offset_right = 758.0
+offset_bottom = 225.0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_m1slk")
+theme_override_font_sizes/font_size = 25
 disabled = true
 text = "Escuadrón 3"
 
 [node name="squad4" type="Button" parent="barracks/assignsquadscreen"]
 layout_mode = 0
-offset_left = 722.0
-offset_top = 157.0
-offset_right = 907.0
-offset_bottom = 224.0
+offset_left = 758.0
+offset_top = 158.0
+offset_right = 1004.0
+offset_bottom = 225.0
 mouse_default_cursor_shape = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("2_m1slk")
+theme_override_font_sizes/font_size = 25
 disabled = true
 text = "Escuadrón 4"
 
 [node name="squad5" type="Button" parent="barracks/assignsquadscreen"]
 layout_mode = 0
-offset_left = 932.0
-offset_top = 157.0
-offset_right = 1117.0
-offset_bottom = 224.0
+offset_left = 1004.0
+offset_top = 158.0
+offset_right = 1209.0
+offset_bottom = 225.0
 mouse_default_cursor_shape = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("2_m1slk")
+theme_override_font_sizes/font_size = 25
 disabled = true
 text = "Escuadrón 5"
 
@@ -2707,6 +2714,7 @@ layout_mode = 0
 offset_left = 1.0
 offset_right = 1231.0
 offset_bottom = 84.0
+theme_override_fonts/font = ExtResource("2_m1slk")
 theme_override_font_sizes/font_size = 42
 text = "Curar soldado"
 horizontal_alignment = 1
@@ -2719,6 +2727,7 @@ offset_top = 2.0
 offset_right = 1231.0
 offset_bottom = 79.0
 mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_m1slk")
 theme_override_font_sizes/font_size = 50
 text = "x"
 flat = true
@@ -2731,6 +2740,7 @@ offset_top = 100.0
 offset_right = 1063.0
 offset_bottom = 167.0
 mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_m1slk")
 theme_override_font_sizes/font_size = 30
 text = "Confirmar"
 
@@ -2741,6 +2751,7 @@ offset_top = 207.0
 offset_right = 1063.0
 offset_bottom = 274.0
 mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_m1slk")
 theme_override_font_sizes/font_size = 30
 text = "Denegar"
 
@@ -2749,6 +2760,7 @@ layout_mode = 0
 offset_top = 100.0
 offset_right = 811.0
 offset_bottom = 194.0
+theme_override_fonts/font = ExtResource("2_m1slk")
 theme_override_font_sizes/font_size = 30
 text = "Seguro que quieres curar
 este soldado por"
@@ -2771,6 +2783,7 @@ offset_left = 511.0
 offset_top = 79.0
 offset_right = 579.0
 offset_bottom = 121.0
+theme_override_fonts/font = ExtResource("2_m1slk")
 theme_override_font_sizes/font_size = 40
 text = "9999"
 horizontal_alignment = 1
