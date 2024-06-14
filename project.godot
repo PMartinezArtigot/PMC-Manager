@@ -25,7 +25,14 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
 
+[editor]
+
+movie_writer/mix_rate=22050
+movie_writer/movie_file="C:/Users/pau_1/Pictures/moviearea/aaa.avi"
+movie_writer/fps=24
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
