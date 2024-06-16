@@ -15,7 +15,7 @@ func _process(delta):
 func _on_context_toggled(toggled_on):
 	$RichTextLabel.text = "[b]¡Bienvenido a PMC Manager![/b]
 
-El mundo se encuentra en medio de un gran conflicto, tres grandes facciones luchan por el control total del planeta y tú, el jugador, ves esta gran guerra como una oportunidad de hacer dinero, crecer tu poder en este nuevo mundo y posiblemente, cambiar el curso del conflicto. Así que juntas unas pocas personas, compráis una base militar abandonada y montáis una compañía militar privada. Aunque tenéis pocos soldados, recursos y equipamiento, las tres fuerzas no tardan en ponen en contacto contigo para solicitar tus servicios.
+El mundo se encuentra en medio de un gran conflicto, tres grandes facciones luchan por el control total del planeta y tú, el jugador, ves esta gran guerra como una oportunidad de hacer dinero, crecer tu poder en este nuevo mundo y posiblemente, cambiar el curso del conflicto. Así que juntas unas pocas personas, compráis una base militar abandonada y montáis una compañía militar privada. Aunque tenéis pocos soldados, recursos y equipamiento, las tres fuerzas no tardan en ponerse en contacto contigo para solicitar tus servicios.
 
 [b]Las Naciones Unidas del Oeste (NUO)[/b]
 
